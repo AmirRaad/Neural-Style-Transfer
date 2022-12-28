@@ -6,7 +6,7 @@ import os
 import matplotlib.pyplot as plt
 
 
-from models.definitions.vgg_nets import Vgg16, Vgg19, Vgg16Experimental
+from vgg_nets import Vgg16, Vgg19, Vgg16Experimental
 
 
 IMAGENET_MEAN_255 = [123.675, 116.28, 103.53]
