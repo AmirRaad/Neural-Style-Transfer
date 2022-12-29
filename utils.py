@@ -148,3 +148,5 @@ def gram_matrix(x, should_normalize=True):
 def total_variation(y):
     return torch.sum(torch.abs(y[:, :, :, :-1] - y[:, :, :, 1:])) + \
            torch.sum(torch.abs(y[:, :, :-1, :] - y[:, :, 1:, :]))
+
+# by eid
