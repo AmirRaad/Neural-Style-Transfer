@@ -216,3 +216,5 @@ class Vgg19(torch.nn.Module):
         vgg_outputs = namedtuple("VggOutputs", self.layer_names)
         out = vgg_outputs(layer1_1, layer2_1, layer3_1, layer4_1, conv4_2, layer5_1)
         return out
+
+# by rawan
