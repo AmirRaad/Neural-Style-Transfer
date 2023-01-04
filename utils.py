@@ -122,7 +122,7 @@ def prepare_model(model, device):
         else:
             model = Vgg16(requires_grad=False, show_progress=True)
     elif model == 'vgg19':
-        model = Vgg19(requires_grad=False, show_progress=True)
+        model = Vgg19(requires_grad=False, show_progress=False)
     else:
         raise ValueError(f'{model} not supported.')
 
