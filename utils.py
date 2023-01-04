@@ -90,7 +90,7 @@ def save_and_maybe_display(optimizing_img, dump_path, config, img_id, num_of_ite
 
     if should_display:
         # plt.imshow(np.uint8(get_uint8_range(out_img)))        
-        plt.imshow(dump_img)
+        plt.imshow(np.uint8(dump_img))
         plt.show()
 
 
