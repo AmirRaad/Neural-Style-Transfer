@@ -77,7 +77,6 @@ def save_and_maybe_display(optimizing_img, dump_path, config, img_id, num_of_ite
     saving_freq = config['saving_freq']
     out_img = optimizing_img.squeeze(axis=0).to('cpu').detach().numpy()
     out_img = np.moveaxis(out_img, 0, 2)  # swap channel from 1st to 3rd position: ch, _, _ -> _, _, chr
-    dump_img = None
 
     # for saving_freq == -1 save only the final result (otherwise save with frequency saving_freq and save the last pic)
     if img_id == num_of_iterations-1 or (saving_freq > 0 and img_id % saving_freq == 0):
@@ -89,8 +88,7 @@ def save_and_maybe_display(optimizing_img, dump_path, config, img_id, num_of_ite
         cv.imwrite(os.path.join(dump_path, out_img_name), dump_img[:, :, ::-1])
 
     if should_display:
-        # plt.imshow(np.uint8(get_uint8_range(out_img)))        
-        plt.imshow(np.uint8(dump_img))
+        plt.imshow(np.uint8(get_uint8_range(out_img)))        
         plt.show()
 
 
