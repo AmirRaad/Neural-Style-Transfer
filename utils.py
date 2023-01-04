@@ -90,7 +90,7 @@ def save_and_maybe_display(optimizing_img, dump_path, config, img_id, num_of_ite
         cv.imwrite(os.path.join(dump_path, out_img_name), dump_img[:, :, ::-1])
 
     if should_display:
-        out_img = cv2.cvtColor(out_img, cv2.COLOR_BGR2RGB)
+        out_img = cv.cvtColor(out_img, cv2.COLOR_BGR2RGB)
         plt.imshow(np.uint8(out_img))
         plt.show()
 
